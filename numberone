@@ -1,0 +1,15 @@
+<?php
+ 
+function myCompare($X, $Y)  
+{   
+    $XY = $Y.$X;   
+    $YX = $X.$Y;   
+    return strcmp($XY, $YX) > 0 ? 1: 0;  
+}  
+   
+function arrangeBiggestNumber($arr)  
+{   
+    usort($arr, "myCompare");   
+    return implode( "", $arr); 
+}  
+?>
